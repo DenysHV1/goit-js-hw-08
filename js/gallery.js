@@ -104,4 +104,11 @@ function oneClickToModal(event) {
 	`);
 
 	instance.show();
+
+	gallery.addEventListener('keydown', (event) => {
+		if (event.code === 'Escape'){
+			instance.close()
+			}
+	});
+
 }

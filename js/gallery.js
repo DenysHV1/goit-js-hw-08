@@ -1,3 +1,4 @@
+//array with is gallery items
 const images = [
 	{
 		preview:
@@ -63,9 +64,11 @@ const images = [
 		description: 'Lighthouse Coast Sea',
 	},
 ];
-
+// creating is markup
 const gallery = document.querySelector('.gallery');
-const markingString = images.map(({preview, original, description}) => `
+const markingString = images
+	.map(
+		({ preview, original, description }) => `
 <li class="gallery-item">
   <a class="gallery-link" href="${original}">
     <img
@@ -76,31 +79,29 @@ const markingString = images.map(({preview, original, description}) => `
     />
   </a>
 </li>
-`).join('');
+`
+	)
+	.join('');
+// add markup to HTML
 gallery.insertAdjacentHTML('afterbegin', markingString);
 
-
-
+//event click
 gallery.addEventListener('click', oneClickToModal);
 
-
-function oneClickToModal (event){
-
+//function for event click
+function oneClickToModal(event) {
 	event.preventDefault();
 
-	if (event.target.nodeName !== "IMG") {
+	if (event.target.nodeName !== 'IMG') {
 		return;
 	}
-	
+
 	const selectedItem = event.target.dataset.source;
-	console.log(selectedItem)
+	console.log(selectedItem);
 
 	const instance = basicLightbox.create(`
 		<img src="${selectedItem}" width="800" height="600">
-	`)
+	`);
 
-instance.show()
-
+	instance.show();
 }
-
-

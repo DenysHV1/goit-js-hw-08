@@ -60,3 +60,29 @@ ul, li {
   .gallery-link{
 	cursor: pointer;
   }
+
+  @media (max-width: 1000px) {
+	.gallery-item {
+		width: calc((100% - 40px) / 3);
+	  }
+
+	.gallery{
+		gap: 20px;
+		padding: 24px 56px;
+	  }
+  }
+
+
+  @media (max-width: 480px) {
+	.gallery{
+		gap: 10px;
+		padding: 24px;
+	  }
+  }
+
+  @media (max-width: 360px) {
+	.gallery{
+		gap: 10px;
+		padding: 10px;
+	  }
+  }

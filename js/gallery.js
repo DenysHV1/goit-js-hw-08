@@ -64,10 +64,6 @@ const images = [
 	},
 ];
 
-// const basicLightbox = require('basiclightbox');
-// import * as basicLightbox from 'dist/basicLightbox.min.js';
-
-
 const gallery = document.querySelector('.gallery');
 const markingString = images.map(({preview, original, description}) => `
 <li class="gallery-item">

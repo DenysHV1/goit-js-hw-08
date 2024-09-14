@@ -74,7 +74,7 @@ const markingString = images
     <img
       class="gallery-image"
       src="${preview}"
-      data-source="${original}"
+      data-large-source="${original}"
       alt="${description}"
     />
   </a>
@@ -96,7 +96,7 @@ function oneClickToModal(event) {
 		return;
 	}
 
-	const selectedItem = event.target.dataset.source;
+	const selectedItem = event.target.dataset.largeSource;
 	console.log(selectedItem);
 
 	const instance = basicLightbox.create(`
